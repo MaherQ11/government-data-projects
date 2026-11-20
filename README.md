@@ -8,8 +8,9 @@ The data behind these projects is internal, so each page describes the problem, 
 |---------|---------------|--------|
 | [Project Portfolio Dashboard](pmo-project-portfolio.md) | Out-of-date project data and wrong reports after the PMO's project platform lost support | ~1,000 projects cleaned and moved to Power BI + SharePoint, used by the whole PMO department |
 | [Project Matching Tool](project-matching-tool.md) | Two project lists that write the same project in different ways | 60 of 61 manual matches confirmed, plus 6 matches the team had missed |
+| [Legal Case Automation](legal-case-automation.md) | Court cases entered by hand on a government legal platform, 4–5 min each | ~30 sec per case in simulation; 542 of 544 cases matched to their consultant |
 
-**Skills:** Data cleaning · Data matching · Power BI · Excel · SharePoint · Python (pandas, Streamlit)
+**Skills:** Data cleaning · Data matching · Power BI · Excel · SharePoint · Python (pandas, Streamlit) · JavaScript browser automation
 
 ---
 
