@@ -3,13 +3,15 @@
 **Organization:** Holy Makkah Municipality, Legal Affairs Department
 **Role:** Data Analyst Trainee — designed and built the tool
 **Tools:** JavaScript browser tool (Tampermonkey userscript), Excel case table
-**Status:** Tested in simulation; a supervised two-week pilot on the live platform is the next step
+**Status:** In use on the live platform by the colleague who requested it
 
 > The case data is internal. This page describes the problem, the approach and the results only.
 
 ---
 
 ## The Problem
+
+A fellow trainee in the department asked me for help: registering cases was a slow, repetitive routine that took up his time and that of others in the office.
 
 Each new court notification has to be registered on the **Unified Legal Platform** (a government platform). For every case, a staff member had to:
 
@@ -50,20 +52,20 @@ Automating a legal record means a mistake matters, so the tool is built to stop 
 - Checks that the open window is the same case that was selected.
 - Stops if a case reappears in the list after being submitted.
 - An instant **stop button**, and an option to **review each case before it is sent**.
-- Tested against **9 simulated scenarios**.
+- Tested against **9 simulated scenarios** before being used on the live platform.
 
 ## Results
 
-| | Manual | With the tool (simulation) |
+| | Manual | With the tool (live use) |
 |---|---|---|
 | Time per case | 4–5 minutes | **~30 seconds** |
 | Time per 100 cases | ~7.5 hours | **~0.8 hours** (saves ~6.7 hours) |
 | Consultant lookup | Manual search in Excel | Automatic — 542 of 544 matched |
 
-During a run, the staff member's job becomes monitoring and handling alerts. The real time saved will be measured on the platform during the pilot.
+On the live platform each case takes about **30 seconds**, and most of that is the platform's own loading time, not the tool. My colleague now starts the tool and works on other tasks while it runs, instead of him or someone else in the office entering cases by hand.
 
 ## What I Learned
 
 - **Look at the data before writing the lookup.** The year + number pattern was the difference between a lookup that failed and one that matched 99.6% of cases.
 - **In sensitive workflows, stopping is better than guessing.** Every safety check is a place where the tool hands control back to a person.
-- **Present the numbers honestly.** The 30-second figure comes from simulation, and the pilot is designed to measure the real one.
+- **Start from a real person's pain.** The tool exists because a colleague described a boring, repetitive task — the best automation ideas come from the people doing the work.
